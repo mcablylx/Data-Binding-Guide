@@ -8,6 +8,10 @@
         <variable
             name="sex"
             type="String"/>
+        <variable
+            name="isShow"
+            type="boolean"/>
+        <import type="android.view.View"/>
     </data>
 
     <LinearLayout
@@ -19,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
-                android:text="@{user.age}"
+                android:text="@{user.phone}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <TextView
@@ -29,6 +33,7 @@
 
         <ListView
             android:id="@+id/lv"
+            android:visibility="@{isShow?View.VISIBLE:View.GONE}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </ListView>
